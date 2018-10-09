@@ -12,16 +12,13 @@ describe('Mortgage Calculator', () => {
     expect(mortgage.monthlyPayment).to.exist;
   });
 
+  it('should contain principal', () => {
+    expect(mortgage.constructor).to.exist;
+  });
+
   it('should calculate monthly interest rate correctly', () => {
+    mortgage = new Mortgage(1000, 20, 10, 2)
     expect(mortgage.monthlyPayment(1000, 20, 10, 2)).to.equal(117.45962477254577);
-  });
-
-  it('should contain principal', () => {
-    expect(mortgage.term).to.exist;
-  });
-
-  it('should contain principal', () => {
-    expect(mortgage.term).to.exist;
   });
 
 });

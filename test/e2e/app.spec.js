@@ -59,10 +59,10 @@ describe('End to End Tests', () => {
 
   it('should contain a button named calculate', () => { 
     return pageObject
-      .evaluate(() => document.querySelector('button').name)
-      .then(name => {
-        expect(name).to.not.be.null;
-        expect(name).to.equal('calculate');
+      .evaluate(() => document.querySelector('button').id)
+      .then(id => {
+        expect(id).to.not.be.null;
+        expect(id).to.equal('calculate');
       });
   });
 
